@@ -1,2 +1,6 @@
-package developia.core.member;public enum Grade {
+package developia.core.member;
+
+public enum Grade {
+    BASIC,
+    VIP
 }

@@ -1,2 +1,8 @@
-package developia.core.member;public class MemberRepository {
+package developia.core.member;
+
+public interface MemberRepository {
+    void save(Member member);
+
+    Member findById(Long memberId);
+
 }
