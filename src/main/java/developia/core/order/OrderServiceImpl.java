@@ -2,6 +2,7 @@ package developia.core.order;
 
 import developia.core.discount.DiscountPolicy;
 import developia.core.discount.FixDiscountPolicy;
+import developia.core.discount.RateDiscountPolicy;
 import developia.core.member.Member;
 import developia.core.member.MemberRepository;
 import developia.core.member.MemoryMemberRepository;
@@ -9,7 +10,8 @@ import developia.core.member.MemoryMemberRepository;
 public class OrderServiceImpl implements OrderService {
 
     private final MemberRepository memberRepository = new MemoryMemberRepository();
-    private final DiscountPolicy discountPolicy = new FixDiscountPolicy();
+    //    private final DiscountPolicy discountPolicy = new FixDiscountPolicy();
+    private final DiscountPolicy discountPolicy = new RateDiscountPolicy();
 
     @Override
     public Order createOrder(Long memberId, String itemName, int itemPrice) {
