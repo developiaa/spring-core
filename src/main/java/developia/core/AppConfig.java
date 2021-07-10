@@ -2,6 +2,7 @@ package developia.core;
 
 import developia.core.discount.DiscountPolicy;
 import developia.core.discount.FixDiscountPolicy;
+import developia.core.discount.RateDiscountPolicy;
 import developia.core.member.MemberRepository;
 import developia.core.member.MemberService;
 import developia.core.member.MemberServiceImpl;
@@ -24,6 +25,7 @@ public class AppConfig {
     }
 
     public DiscountPolicy discountPolicy() {
-        return new FixDiscountPolicy();
+//        return new FixDiscountPolicy();
+        return new RateDiscountPolicy();
     }
 }
