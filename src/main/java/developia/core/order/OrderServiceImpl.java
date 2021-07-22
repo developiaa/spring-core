@@ -1,5 +1,6 @@
 package developia.core.order;
 
+import developia.core.annotation.MainDiscountPolicy;
 import developia.core.discount.DiscountPolicy;
 import developia.core.discount.FixDiscountPolicy;
 import developia.core.discount.RateDiscountPolicy;
@@ -20,7 +21,7 @@ public class OrderServiceImpl implements OrderService {
     private final DiscountPolicy discountPolicy;
 
     @Autowired
-    public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
+    public OrderServiceImpl(MemberRepository memberRepository, @MainDiscountPolicy DiscountPolicy discountPolicy) {
         this.memberRepository = memberRepository;
         this.discountPolicy = discountPolicy;
     }
